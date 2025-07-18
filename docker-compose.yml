@@ -1,0 +1,23 @@
+services:
+  app1:
+    build: ./app
+    container_name: fastapi_app1
+    expose:
+      - "8000"
+
+  app2:
+    build: ./app
+    container_name: fastapi_app2
+    expose:
+      - "8000"
+
+  haproxy:
+    image: haproxy:2.9
+    container_name: haproxy_gateway
+    ports:
+      - "8090:80"
+    volumes:
+      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    depends_on:
+      - app1
+      - app2
