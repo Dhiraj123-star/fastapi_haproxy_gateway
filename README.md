@@ -22,7 +22,7 @@ A lightweight, production-style gateway setup using **FastAPI**, **HAProxy**, **
 ## 🧪 Usage
 
 - 🔗 Access the app securely via NGINX HTTPS:  
-  `https://localhost:8443`
+  `https://localhost`
 
 - 💡 If accessing via browser, accept the self-signed certificate warning.
 
