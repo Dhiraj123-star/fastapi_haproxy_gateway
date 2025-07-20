@@ -15,7 +15,7 @@ services:
     image: haproxy:2.9
     container_name: haproxy_gateway
     ports:
-      - "8090:80"
+      - "8000:80"
     volumes:
       - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
