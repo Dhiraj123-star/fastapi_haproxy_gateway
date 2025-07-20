@@ -1,2 +1,4 @@
 # Ignore SSL certificates
 nginx/certs/
+logs/
+*.log
